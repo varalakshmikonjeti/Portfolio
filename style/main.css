@@ -1,175 +1,215 @@
-.about-modern {
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+
+.nav-container {
   max-width: 1100px;
-  margin: 3rem auto;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ff6f61;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #bbb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff6f61;
+  border-color: #ff6f61;
+}
+
+/* Main container */
+.about-container {
+  max-width: 900px;
+  margin: 3rem auto 5rem;
   padding: 0 1.5rem;
 }
 
-.about-hero {
+/* Profile section */
+.profile-section {
   display: flex;
-  align-items: center;
   gap: 3rem;
-  background: linear-gradient(90deg, #232946 70%, #00bcd4 100%);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0,188,212,0.15);
-  padding: 2.5rem 2rem;
-  margin-bottom: 3rem;
+  align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 3rem;
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(255, 111, 97, 0.15);
 }
 
-.about-photo img {
+.profile-image-wrapper {
+  flex: 0 0 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px #ff6f61;
+  transition: transform 0.3s ease;
+}
+
+.profile-image-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.profile-image {
   width: 180px;
   height: 180px;
-  border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #ff6f61;
-  box-shadow: 0 4px 24px rgba(255,111,97,0.25);
+  display: block;
 }
 
-.about-intro {
-  flex: 1 1 320px;
+.profile-info {
+  flex: 1 1 400px;
 }
 
-.about-intro h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-
-.about-intro .tagline {
+.profile-name {
+  font-size: 2.8rem;
+  margin: 0 0 0.3rem 0;
   color: #ff6f61;
-  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.profile-title {
+  font-size: 1.4rem;
+  color: #00bcd4;
   margin-bottom: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-.about-intro p {
-  color: #e0e0e0;
-  font-size: 1.15rem;
-  margin-bottom: 1.2rem;
+.profile-bio {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 1.8rem;
+  line-height: 1.5;
 }
 
-.about-social a {
-  margin-right: 1.2rem;
-  color: #00bcd4;
+/* Contact icons */
+.contact-info a {
+  color: #bbb;
   font-size: 1.6rem;
-  transition: color 0.2s, transform 0.2s;
-}
-.about-social a:hover {
-  color: #ff6f61;
-  transform: scale(1.15) rotate(-8deg);
+  margin-right: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
 }
 
-/* Skills Section */
-.about-skills {
+.contact-info a:hover {
+  color: #ff6f61;
+  transform: scale(1.2);
+}
+
+/* Skills section */
+.skills-section {
   margin-bottom: 3rem;
 }
-.about-skills h2 {
-  color: #00bcd4;
+
+.skills-section h3 {
   font-size: 2rem;
-  margin-bottom: 1.2rem;
-  text-align: center;
-}
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  justify-content: center;
-}
-.skill-card {
-  background: #232946;
-  color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,188,212,0.09);
-  padding: 1rem 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-  cursor: pointer;
-}
-.skill-card:hover {
-  background: #ff6f61;
-  color: #fff;
-  transform: translateY(-5px) scale(1.07);
+  margin-bottom: 1rem;
+  color: #00bcd4;
+  border-bottom: 2px solid #ff6f61;
+  display: inline-block;
+  padding-bottom: 0.3rem;
 }
 
-/* Timeline Section */
-.about-timeline {
-  margin-bottom: 2rem;
-}
-.about-timeline h2 {
-  color: #00bcd4;
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
-  text-align: center;
-}
-.timeline {
+.skills-list {
   list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-  position: relative;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem 2rem;
+  color: #ddd;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
-.timeline li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-  position: relative;
-}
-.timeline-date {
-  background: #ff6f61;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  margin-right: 1.5rem;
-  box-shadow: 0 2px 8px rgba(255,111,97,0.15);
-  min-width: 70px;
+
+.skills-list li {
+  background: #232946;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.15);
   text-align: center;
 }
-.timeline-content {
-  background: #232946;
-  color: #fff;
-  border-radius: 10px;
-  padding: 1rem 1.2rem;
-  box-shadow: 0 2px 8px rgba(0,188,212,0.07);
-  font-size: 1.08rem;
+
+/* Journey section */
+.journey-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00bcd4;
+  border-bottom: 2px solid #ff6f61;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.journey-list {
+  list-style: none;
+  padding-left: 0;
+  color: #ddd;
   font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.journey-list li {
+  margin-bottom: 1rem;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-  .about-hero {
+@media (max-width: 768px) {
+  .profile-section {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 1rem;
-    gap: 2rem;
+    align-items: center;
+    text-align: center;
   }
-  .about-photo img {
-    margin: 0 auto;
-    display: block;
-  }
-}
 
-@media (max-width: 600px) {
-  .about-modern {
-    padding: 0 0.3rem;
+  .profile-info {
+    flex: none;
   }
-  .about-hero {
-    padding: 1.2rem 0.3rem;
-  }
-  .about-intro h1 {
-    font-size: 1.4rem;
-  }
-  .about-skills h2,
-  .about-timeline h2 {
-    font-size: 1.2rem;
-  }
-  .skill-card {
-    font-size: 0.95rem;
-    padding: 0.7rem 1rem;
+
+  .profile-image-wrapper {
+    margin-bottom: 1.5rem;
   }
 }
