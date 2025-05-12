@@ -1,77 +1,48 @@
-/* Reset some default styles */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: #181b2c;
-  color: #fff;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: linear-gradient(90deg, #232946 60%, #00bcd4 100%);
-  padding: 2rem 0 1rem 0;
-  text-align: center;
-}
-
-.profile-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 4px solid #ff6f61;
-  margin-bottom: 1rem;
-  object-fit: cover;
-}
-
-nav a {
-  color: #00bcd4;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: #ff6f61;
-}
-
-.hero {
-  max-width: 600px;
+.certificates-page {
+  max-width: 960px;
   margin: 3rem auto;
-  text-align: center;
   padding: 0 1rem;
+  color: #fff;
+  text-align: center;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.certificates-page h1 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
   color: #ff6f61;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
+.certificates-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
-.cta-btn {
-  display: inline-block;
-  background: #ff6f61;
-  color: #fff;
-  padding: 0.8rem 2rem;
+.cert-card {
+  background: #232946;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 188, 212, 0.15);
+  padding: 1rem;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(255, 111, 97, 0.35);
+}
+
+.cert-card img {
+  width: 100%;
   border-radius: 12px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-  transition: background 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
 }
 
-.cta-btn:hover {
-  background: #00bcd4;
-  color: #181b2c;
+.cert-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00bcd4;
+  margin: 0;
 }
