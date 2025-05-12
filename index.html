@@ -3,31 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Konjeti Varalakshmi | DevOps Portfolio</title>
+  <title>Certificates | Konjeti Varalakshmi</title>
   <link rel="stylesheet" href="style/main.css" />
 </head>
 <body>
-  <header>
-    <img src="images/profile.jpeg" alt="Profile Photo" class="profile-photo" >
-    <img src="certificates/Varalakshmi_Konjeti_AI_DevOps_Engineer_page-0001.jpg" alt="AI DevOps Certificate" width="600">
-    <img src="certificates/Varalakshmi_Konjeti_Core_Python_Programming_page-0001.jpg" alt="Python Certificate" width="500" />
-
-    <h1>Konjeti Varalakshmi</h1>
+  <header class="sticky-header">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="certificates.html">Certificates</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://github.com/varalakshmikonjeti" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="index.html" class="nav-logo">Konjeti Varalakshmi</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="certificates.html" class="active">Certificates</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://github.com/varalakshmikonjeti" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>DevOps & Cloud Engineer</h2>
-      <p>Passionate about automation, cloud, and CI/CD. Explore my journey and certifications!</p>
-      <a class="cta-btn" href="https://github.com/varalakshmikonjeti" target="_blank" rel="noopener noreferrer">View My GitHub Projects</a>
-    </section>
+  <main class="certificates-page">
+    <h1>My Certificates</h1>
+    <div class="certificates-gallery">
+      <div class="cert-card">
+        <img src="certificates/Varalakshmi_Konjeti_AI_DevOps_Engineer.jpg" alt="AI DevOps Engineer Certificate" />
+        <p>AI DevOps Engineer - Open Financial Technologies</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/Varalakshmi_Konjeti_Core_Python_Programming.jpg" alt="Core Python Programming Certificate" />
+        <p>Core Python Programming - Avanto Pvt. Ltd.</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/Varalakshmi_Konjeti_Linux_Great_Learning.jpeg" alt="Linux Certificate" />
+        <p>Linux - Great Learning</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/Varalakshmi_Konjeti_DevOps_Great_Learning.jpeg" alt="DevOps Certificate" />
+        <p>DevOps - Great Learning</p>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/Varalakshmi_Konjeti_AWS_Introduction.jpeg" alt="AWS Introduction Certificate" />
+        <p>AWS Introduction - Great Learning</p>
+      </div>
+    </div>
   </main>
 </body>
 </html>
